@@ -26,10 +26,10 @@ app.add_middleware(
 # Include API router
 app.include_router(api_router, prefix="/api/v1")
 
-@app.get("/")
+@app.get("/api/v1/")
 async def root():
     return {"message": "Welcome to DiaryX API"}
 
-@app.get("/health")
+@app.get("/api/v1/health")
 async def health_check():
     return {"status": "healthy"} 
