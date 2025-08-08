@@ -16,6 +16,8 @@ app.add_middleware(
         "http://localhost:3000",  # Local development
         "https://*.railway.app",  # Railway domains
         "https://*.up.railway.app",  # Railway domains
+        "https://*.vercel.app",  # Vercel domains
+        "https://*.onrender.com",  # Render domains
         "*"  # Allow all origins for development (restrict in production)
     ],
     allow_credentials=True,

@@ -1,6 +1,13 @@
 import os
 from datetime import datetime
 from dotenv import load_dotenv
+
+import sys
+from pathlib import Path
+
+# Add the project root to the Python path
+sys.path.append(str(Path(__file__).parent.parent))
+
 from app.core.supabase import get_supabase_client
 
 # Load environment variables
@@ -17,8 +24,7 @@ def test_supabase_connection():
         test_entry = {
             "date": datetime.now().isoformat(),
             "duration_minutes": 30,
-            "notes": "Test entry",
-            "user_id": "test_user"
+            "notes": "Test entry"
         }
 
         # Test insert
